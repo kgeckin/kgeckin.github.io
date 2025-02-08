@@ -1,7 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kardelen Geçkin - Portfolio</title>
+  <!-- Google Fonts (Roboto) -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <style>
+    /* Genel Sayfa Stili */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #faf8ef;
+      color: #776e65;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background: #bbada0;
+      color: #f9f6f2;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+    header h4 {
+      margin-top: 10px;
+      font-weight: 400;
+    }
+    /* Navigasyon ve Proje Butonları */
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background: #8f7a66;
+      color: #f9f6f2;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    .nav a:hover {
+      background: #7e6b58;
+    }
+    /* GitHub Bilgi Bölümü */
+    .github-info {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .github-info img {
+      vertical-align: middle;
+      margin: 0 10px;
+    }
+    /* Projeler Bölümü */
+    .projects {
+      margin-top: 40px;
+    }
+    .projects h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #8f7a66;
+      margin-bottom: 20px;
+    }
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #8f7a66;
+    }
+    .project-card p {
+      font-size: 14px;
+      color: #555;
+    }
+    .project-card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #edc22e;
+      color: #f9f6f2;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    .project-card a:hover {
+      background: #d4b11f;
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #aaa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <!-- Üst Kısım: Başlık & Özgeçmiş -->
+  <header>
+    <h1>I'm Kardelen Geçkin ✨</h1>
+    <h4>Data Analysis, Machine Learning, and Cybersecurity Enthusiast</h4>
+    <a href="https://www.linkedin.com/in/krgckn/" rel="nofollow">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png" height="30" style="margin: 0 10px;" alt="LinkedIn">
+    </a>
+  </header>
+  
+  <div class="container">
+    <!-- GitHub Bilgi Bölümü -->
+    <section class="github-info">
+      <p align="center">
+        Hello 🖖, I'm an 
+        <a href="https://fizik.itu.edu.tr/en/home" rel="nofollow"><b>Applied Physics/Physics Engineering</b></a> 
+        student at 
+        <a href="https://www.itu.edu.tr/en/homepage" rel="nofollow"><b>Istanbul Technical University</b></a>.
+        My interests include <b>Machine Learning</b>, <b>Cybersecurity</b>, and <b>Data Analysis</b>. 
+        I have completed various courses, including UP School's AI-First Developer Program and Google's Cybersecurity courses.
+      </p>
+      <h3>Technologies and Tools</h3>
+      <h4>Programming Languages & Frameworks</h4>
+      <p align="center">
+        <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+        <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a>
+        <a href="https://www.microsoft.com/en-us/sql-server" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="mssql" width="40" height="40"/> </a>
+        <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a>
+      </p>
+      <h4>Data Science & Machine Learning</h4>
+      <p align="center">
+        <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a>
+        <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a>
+        <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a>
+        <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a>
+      </p>
+      <h3>Interests & Certifications</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>Machine Learning and AI</li>
+        <li>Cybersecurity and Ethical Hacking</li>
+        <li>Data Analysis and Visualization</li>
+      </ul>
+      <h4>Certifications:</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li>CISCO CyberOps Associate</li>
+        <li>Google Cybersecurity Certification</li>
+        <li>IBM Data Science Professional Certificate</li>
+      </ul>
+    </section>
+    
+    <!-- Projeler Bölümü -->
+    <section class="projects">
+      <h2>Projelerim</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>2048 Oyunu</h3>
+          <p>Modern arayüzü ve dinamik özellikleri ile geliştirilmiş 2048 oyunum.</p>
+          <!-- Burada "game2048" klasörünüze yönlendiren bağlantı kullanılıyor -->
+          <a href="game2048/">Oyuna Git</a>
+        </div>
+        <!-- Diğer projeler eklenebilir -->
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Kardelen Geçkin. Tüm hakları saklıdır.
+  </footer>
 </body>
 </html>
