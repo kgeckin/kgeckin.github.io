@@ -109,6 +109,22 @@
       background: #d4b11f;
     }
 
+    .project-card a.github-repo {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 5px 10px;  /* Orijinal butondan daha küçük */
+      background: #6c757d;  /* Farklı bir renk tercihi */
+      color: #f9f6f2;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.8rem;  /* Yazı boyutu küçültüldü */
+      transition: background 0.2s;
+    }
+
+    .project-card a.github-repo:hover {
+      background: #5a6268;
+    }
+
   </style>
 </head>
 <body>
@@ -167,9 +183,9 @@
           <h3>2048 Oyunu</h3>
           <a href="https://web.itu.edu.tr/~geckin19/">Oyuna Git</a>
           <br>
-          <small>
-            <a href="https://github.com/kgeckin/game2048" target="_blank" rel="noopener noreferrer">GitHub Reposu</a>
-          </small>
+          <a href="https://github.com/kgeckin/game2048" class="github-repo" target="_blank" rel="noopener noreferrer">
+            GitHub Reposu
+          </a>
         </div>
       </div>
     </section>
