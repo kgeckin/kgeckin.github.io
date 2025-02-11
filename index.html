@@ -125,6 +125,14 @@
       background: #5a6268;
     }
 
+    .project-card img.project-image {
+      width: 100%;       /* Resmin kart genişliğine uyum sağlaması */
+      height: auto;      /* Orantılı yüksekliği otomatik ayarlar */
+      border-radius: 10px; /* Köşeleri yuvarlatır */
+      margin-bottom: 10px; /* Resim ile başlık arasında boşluk bırakır */
+    }
+
+
   </style>
 </head>
 <body>
@@ -180,6 +188,7 @@
       <h2>Github Projelerim</h2>
       <div class="project-cards">
         <div class="project-card">
+          <img src="https://github.com/kgeckin/game2048/blob/main/images/gameplay.png" alt="2048 Oyunu" class="project-image">
           <h3>2048 Oyunu</h3>
           <a href="https://web.itu.edu.tr/~geckin19/">Oyuna Git</a>
           <br>
