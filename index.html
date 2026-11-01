@@ -1,175 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0c1015">
-  <meta name="description" content="Kardelen Geçkin. Infrastructure engineering, applied software and systems thinking. Selected work and experiments.">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b121a">
+  <meta name="description" content="Kardelen Geçkin, IT Storage Engineer. Infrastructure, systems thinking, storage observability, applied software and data projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kardelen Geçkin | Engineering in Context">
+  <meta property="og:description" content="Real systems, considered. A curated engineering portfolio.">
+  <meta property="og:url" content="https://kgeckin.github.io/">
   <title>Kardelen Geçkin | Engineering in Context</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #0c1015; --surface: #151b22; --surface-2: #1b232c;
-      --text: #f4f1e9; --muted: #a7a9ad; --gold: #d6bb8b;
-      --stroke: #3b4047; --max: 1040px;
-      font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
-      font-synthesis: none;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: radial-gradient(ellipse at 83% 7%, #25231c 0, transparent 33%), var(--bg); color: var(--text); line-height: 1.6; }
-    a { color: inherit; }
-    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
-    .wrap { max-width: var(--max); padding-inline: 26px; margin-inline: auto; }
-    .top { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-block: 26px; border-bottom: 1px solid var(--stroke); }
-    .monogram { font: 600 32px Georgia, serif; color: var(--gold); text-decoration: none; }
-    .top nav { display: flex; flex-wrap: wrap; gap: 22px; }
-    .top nav a, .external { font-size: .85rem; color: #d6d1c7; text-decoration: none; }
-    .top nav a:hover, .external:hover { color: var(--gold); }
-    .hero { min-height: 460px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 30px; padding-block: 86px; border-bottom: 1px solid var(--stroke); }
-    .eyebrow { color: var(--gold); font-weight: 600; font-size: .72rem; letter-spacing: .24em; text-transform: uppercase; }
-    h1 { font-size: clamp(3.4rem, 8vw, 6.6rem); font-weight: 680; line-height: .98; letter-spacing: -.065em; margin: 20px 0 24px; }
-    .intro { font-size: clamp(1.05rem, 2.5vw, 1.4rem); max-width: 560px; color: #d5d0c8; }
-    .current { color: var(--muted); font-size: .9rem; }
-    .gold-line { display: block; height: 3px; width: 93px; background: linear-gradient(90deg, #aa9063, #ebd2a5); margin: 28px 0; }
-    .network { display: block; width: 100%; min-height: 300px; }
-    .network line { stroke: var(--gold); stroke-opacity: .46; stroke-width: 1.2; }
-    .network circle { fill: var(--surface-2); stroke: var(--gold); stroke-width: 1.5; }
-    .network circle.center { fill: var(--gold); }
-    .section { padding-block: 78px; }
-    .section-title { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); letter-spacing: -.04em; margin: 0; }
-    .section-title p { color: var(--muted); margin: 0; font-size: .9rem; }
-    .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
-    .filter { cursor: pointer; border: 1px solid var(--stroke); border-radius: 28px; background: transparent; padding: 10px 18px; color: #d6d1c7; font: inherit; font-size: .84rem; transition: background .2s, border-color .2s; }
-    .filter[aria-pressed="true"] { border-color: var(--gold); background: #29271f; color: #f4e7cf; }
-    .filter:hover { border-color: var(--gold); }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
-    .project { position: relative; display: flex; flex-direction: column; gap: 12px; min-height: 255px; padding: 30px; border: 1px solid var(--stroke); border-radius: 13px; background: linear-gradient(130deg, #1b2129, #10161d); text-decoration: none; transition: border-color .2s, transform .2s; }
-    .project:hover { border-color: #bea57d; transform: translateY(-3px); }
-    .project[hidden] { display: none; }
-    .project .num { font-size: .78rem; letter-spacing: .18em; color: var(--gold); }
-    .project h3 { font-size: 1.55rem; letter-spacing: -.03em; margin: 6px 0 0; }
-    .project p { margin: 0; color: #c6c5c1; max-width: 430px; }
-    .project .arrow { color: var(--gold); margin-top: auto; font-size: .9rem; font-weight: 600; }
-    .foot { border-top: 1px solid var(--stroke); padding-block: 48px; color: var(--muted); }
-    .foot-inner { display:flex; justify-content:space-between; gap: 24px; flex-wrap:wrap; align-items:center; }
-    .foot .links { display: flex; flex-wrap: wrap; gap: 22px; }
-    details { border: 1px solid var(--stroke); border-radius: 12px; background: var(--surface); padding: 20px 25px; }
-    summary { cursor: pointer; font-weight: 600; }
-    details p { color: #c6c5c1; max-width: 790px; }
-    .muted { color: var(--muted); }
-    @media (max-width: 780px) {
-      .hero { grid-template-columns: 1fr; gap: 5px; padding-block: 70px; }
-      .network { min-height: 195px; max-height: 240px; }
-      .grid { grid-template-columns: 1fr; }
-      .section { padding-block: 56px; }
-      .project { min-height: 230px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
-    }
-  </style>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('kg-theme') === 'light' ? 'light' : 'dark'; } catch {}
+  </script>
+  <script src="./app.js" defer></script>
 </head>
 <body>
-  <header class="top wrap">
-    <a href="#top" class="monogram" aria-label="Return to top">KG.</a>
-    <nav aria-label="Main navigation">
-      <a href="#work">Selected work</a>
-      <a href="#about">Perspective</a>
-      <a href="#connect">Connect</a>
-    </nav>
-  </header>
-  <main id="top" class="wrap">
-    <section class="hero" aria-labelledby="hero-title">
-      <div>
-        <div class="eyebrow">Engineering in context / Istanbul</div>
-        <h1 id="hero-title">Kardelen<br>Geçkin.</h1>
-        <span class="gold-line" aria-hidden="true"></span>
-        <p class="intro">The systems behind the systems.</p>
-        <p class="current">IT Storage Engineer · Building toward infrastructure and cloud architecture</p>
-      </div>
-      <svg class="network" viewBox="0 0 440 380" role="img" aria-labelledby="network-title">
-        <title id="network-title">Abstract connected systems diagram</title>
-        <line x1="65" y1="188" x2="169" y2="94"/><line x1="65" y1="188" x2="179" y2="303"/>
-        <line x1="169" y1="94" x2="275" y2="185"/><line x1="275" y1="185" x2="179" y2="303"/>
-        <line x1="275" y1="185" x2="375" y2="90"/><line x1="275" y1="185" x2="370" y2="290"/>
-        <line x1="169" y1="94" x2="375" y2="90"/><line x1="179" y1="303" x2="370" y2="290"/>
-        <circle cx="65" cy="188" r="12"/><circle cx="169" cy="94" r="11"/><circle cx="179" cy="303" r="12"/>
-        <circle cx="275" cy="185" r="17" class="center"/><circle cx="375" cy="90" r="10"/><circle cx="370" cy="290" r="12"/>
-      </svg>
-    </section>
-    <section id="work" class="section" aria-labelledby="work-title">
-      <div class="section-title">
-        <h2 id="work-title">Selected work</h2>
-        <p>Real projects. Click to explore.</p>
-      </div>
-      <div class="filters" aria-label="Project filters">
-        <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
-        <button class="filter" type="button" data-filter="systems" aria-pressed="false">Systems</button>
-        <button class="filter" type="button" data-filter="ai" aria-pressed="false">Applied AI</button>
-        <button class="filter" type="button" data-filter="data" aria-pressed="false">Data</button>
-        <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
-      </div>
-      <div class="grid" id="projects">
-        <a class="project" href="https://github.com/kgeckin/W-Code2.0_FrontEnd/tree/main/HW" data-category="systems web">
-          <span class="num">01 / SYSTEMS &amp; SOFTWARE</span>
-          <h3>Inventory Portal</h3>
-          <p>A Flask prototype exploring asset tracking, user roles, and everyday administration.</p>
-          <span class="arrow">View project ↗</span>
-        </a>
-        <a class="project" href="https://github.com/kgeckin/UP-School-AI-First-Developer/tree/main/Capstone" data-category="ai web">
-          <span class="num">02 / APPLIED AI</span>
-          <h3>LinguaX</h3>
-          <p>Speech recognition, translation, and timestamped subtitle exports.</p>
-          <span class="arrow">View project ↗</span>
-        </a>
-        <a class="project" href="https://github.com/kgeckin/IBM_Applied_Data_Science_Capstone" data-category="data ai">
-          <span class="num">03 / ANALYTICS</span>
-          <h3>Falcon 9 Analysis</h3>
-          <p>From launch datasets and spatial analysis to model evaluation.</p>
-          <span class="arrow">View project ↗</span>
-        </a>
-        <a class="project" href="https://github.com/kgeckin/game2048" data-category="web">
-          <span class="num">04 / INTERACTIVE SOFTWARE</span>
-          <h3>2048</h3>
-          <p>A puzzle implemented with Flask and in the browser.</p>
-          <span class="arrow">View project ↗</span>
-        </a>
-      </div>
-    </section>
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="section-title">
-        <h2 id="about-title">Perspective</h2>
-        <p>One system. Many connected decisions.</p>
-      </div>
-      <details>
-        <summary>What I work on and where I'm heading</summary>
-        <p>My current work is in enterprise storage delivery and system integration. I care about how infrastructure components fit together and how to design reliable systems. My longer-term direction is infrastructure and cloud architecture.</p>
-        <p>My academic foundation in physics engineering informs how I approach analysis, models, and engineering tradeoffs.</p>
-      </details>
-    </section>
-  </main>
-  <footer class="foot" id="connect">
-    <div class="wrap foot-inner">
-      <span>KG. / Curiosity, made practical.</span>
-      <div class="links">
-        <a class="external" href="https://github.com/kgeckin">GitHub</a>
-        <a class="external" href="https://www.linkedin.com/in/krgckn/">LinkedIn</a>
-        <a class="external" href="https://github.com/kgeckin?tab=repositories">All repositories</a>
+  <a href="#main" class="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Kardelen Geçkin homepage">
+        <span class="brand-mark">KG<span>.</span></span>
+        <span class="brand-text"><strong>KARDELEN GEÇKIN</strong><small>ENGINEERING PORTFOLIO</small></span>
+      </a>
+      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#approach">Approach</a><a href="#connect">Connect</a></nav>
+      <div class="header-controls">
+        <button id="theme" class="theme-button" aria-label="Toggle light and dark color theme" type="button">◐ <span>Theme</span></button>
+        <a href="https://github.com/kgeckin" class="nav-github" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </div>
     </div>
-  </footer>
-  <script>
-    const buttons = document.querySelectorAll('[data-filter]');
-    const cards = document.querySelectorAll('[data-category]');
-    buttons.forEach(button => button.addEventListener('click', () => {
-      const filter = button.dataset.filter;
-      buttons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
-      cards.forEach(card => {
-        card.hidden = filter !== 'all' && !card.dataset.category.split(' ').includes(filter);
-      });
-    }));
-  </script>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot"></span> INFRASTRUCTURE / SYSTEMS / ENGINEERING</span>
+          <h1>Systems,<br><em>considered.</em></h1>
+          <p class="hero-description">I work where infrastructure components meet. My focus is understanding the architecture, dependencies and decisions that make systems reliable.</p>
+          <div class="identity"><span class="avatar">KG</span><div><strong>Kardelen Geçkin</strong><small>IT Storage Engineer · Istanbul, Türkiye</small></div></div>
+          <div class="hero-actions"><a class="button primary" href="#work">Explore selected work <span aria-hidden="true">↗</span></a><a class="button outline" href="https://www.linkedin.com/in/krgckn/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+          <p class="hero-foot">Working toward infrastructure and cloud architecture.</p>
+        </div>
+        <div class="hero-diagram" role="img" aria-label="Illustrative connected infrastructure diagram with compute, network, storage and observability nodes">
+          <div class="diagram-toolbar"><span>01 / SYSTEMS MAP</span><span class="status">● LAB STUDY</span></div>
+          <svg viewBox="0 0 560 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#8EA7B3" stroke-opacity=".17" stroke-width="1"/></pattern>
+              <linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#63CFC0"/><stop offset="1" stop-color="#DEBF8B"/></linearGradient>
+              <linearGradient id="core" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#294154"/><stop offset="1" stop-color="#131F2C"/></linearGradient>
+            </defs>
+            <rect width="560" height="480" fill="url(#grid)"/>
+            <circle cx="280" cy="235" r="176" stroke="#6D9AA7" stroke-opacity=".23" stroke-dasharray="5 9" fill="none"/>
+            <circle cx="280" cy="235" r="136" stroke="#D6BE95" stroke-opacity=".2" fill="none"/>
+            <path d="M155 135 220 193M415 134 340 194M146 345 223 287M416 345 337 287" stroke="url(#line)" stroke-width="2" stroke-dasharray="5 5"/>
+            <rect x="180" y="150" width="200" height="174" rx="17" fill="url(#core)" stroke="#80A6B3"/>
+            <rect x="201" y="170" width="158" height="26" rx="6" fill="#1B3343" stroke="#597583"/>
+            <circle cx="218" cy="183" r="4" fill="#67D8C5"/><path d="M233 183h110" stroke="#799DAA"/>
+            <rect x="201" y="208" width="158" height="48" rx="7" fill="#182D3B"/>
+            <path d="M212 246 238 226 253 241 276 217 293 231 312 217 346 225" stroke="#74DCCB" stroke-width="2.8" fill="none" stroke-linejoin="round"/>
+            <rect x="201" y="267" width="73" height="38" rx="6" fill="#294355"/><rect x="284" y="267" width="75" height="38" rx="6" fill="#294355"/>
+            <circle cx="239" cy="285" r="12" stroke="#D7BF92" stroke-width="5" fill="none" stroke-dasharray="44 18"/>
+            <path d="M305 297v-14m12 14v-22m12 22v-11m12 11v-18" stroke="#77D9CD" stroke-width="5"/>
+            <g class="diagram-nodes">
+              <rect x="18" y="93" width="152" height="78" rx="11"/><text x="37" y="123" class="node-name">COMPUTE</text><text x="37" y="148" class="node-sub">hosts / platforms</text>
+              <rect x="389" y="93" width="154" height="78" rx="11"/><text x="408" y="123" class="node-name">NETWORK</text><text x="408" y="148" class="node-sub">fabric / access</text>
+              <rect x="18" y="311" width="152" height="78" rx="11"/><text x="37" y="341" class="node-name">STORAGE</text><text x="37" y="366" class="node-sub">data / resilience</text>
+              <rect x="389" y="311" width="154" height="78" rx="11"/><text x="408" y="341" class="node-name">OBSERVE</text><text x="408" y="366" class="node-sub">signal / health</text>
+            </g>
+            <circle cx="280" cy="62" r="4" fill="#DEBF8B"/><circle cx="113" cy="236" r="4" fill="#70D8C7"/><circle cx="448" cy="236" r="4" fill="#70D8C7"/>
+            <text x="280" y="451" text-anchor="middle" fill="#9BB1C1" font-size="11" letter-spacing="2">CONNECTED BY DESIGN</text>
+          </svg>
+          <div class="diagram-toolbar bottom"><span>FIG 01 / INFRASTRUCTURE</span><span>DESIGN · DELIVERY · OPERATIONS</span></div>
+        </div>
+      </div>
+      <div class="container scroll-hint"><span>01 / INTRODUCTION</span><a href="#work">SELECTED WORK ↓</a></div>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading"><div><span class="eyebrow">02 / SELECTED WORK</span><h2 id="work-title">Ideas made <em>practical.</em></h2></div><p>Real repositories with clear scope and honest technical context.</p></div>
+
+        <article class="featured" aria-labelledby="featured-title">
+          <div class="featured-copy">
+            <div class="feature-meta"><span class="index">01</span><span class="tag">FEATURED PROJECT</span></div>
+            <p class="category">INFRASTRUCTURE / OBSERVABILITY</p>
+            <h3 id="featured-title">StorageOps<br><em>Lab.</em></h3>
+            <p>Interactive storage observability with synthetic arrays, capacity and performance charts, alerts and optional real host telemetry collected by an authorized local agent.</p>
+            <div class="tech"><span>FastAPI</span><span>React</span><span>ECharts</span><span>Docker</span><span>Python</span></div>
+            <p class="provenance">Storage array measurements are simulated. Host measurements are opt in and separately identified.</p>
+            <a class="project-link" href="https://github.com/kgeckin/storageops-lab" target="_blank" rel="noopener noreferrer">View source and architecture <span>↗</span></a>
+          </div>
+          <div class="featured-art" aria-label="Illustrative dashboard study, not a live screenshot">
+            <div class="art-heading"><span>STORAGEOPS / LAB CONSOLE</span><span>ARTWORK · NOT LIVE</span></div>
+            <div class="mock">
+              <div class="mock-sidebar"><b>S.</b><i></i><i></i><i></i><i></i></div>
+              <div class="mock-content">
+                <div class="mock-top"><span>INFRASTRUCTURE OVERVIEW</span><span>● SIMULATION</span></div>
+                <h4>Storage telemetry</h4>
+                <div class="mock-metrics"><div><small>ARRAYS</small><strong>03</strong></div><div><small>TELEMETRY</small><strong>LAB</strong></div><div><small>HOST DATA</small><strong>OPT IN</strong></div></div>
+                <div class="mock-chart"><span>PERFORMANCE SIGNAL <small>ILLUSTRATIVE</small></span>
+                  <svg viewBox="0 0 460 172" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#70DDD1" stop-opacity=".35"/><stop offset="1" stop-color="#70DDD1" stop-opacity="0"/></linearGradient></defs>
+                    <path d="M0 40H460M0 85H460M0 132H460" stroke="#A0ACB4" stroke-opacity=".2"/>
+                    <path d="M0 148L37 127 68 131 105 102 145 110 182 61 223 83 270 42 309 69 346 30 385 53 425 23 460 40V172H0Z" fill="url(#area)"/>
+                    <path d="M0 148L37 127 68 131 105 102 145 110 182 61 223 83 270 42 309 69 346 30 385 53 425 23 460 40" fill="none" stroke="#78E1D2" stroke-width="3.2" stroke-linejoin="round"/>
+                    <circle cx="425" cy="23" r="5" fill="#E5CB98"/></svg>
+                </div>
+                <div class="mock-bottom"><span><i class="mock-ring"></i> CAPACITY</span><span>▂▅▇▄▆ &nbsp; OPERATIONS</span></div>
+              </div>
+            </div>
+            <div class="art-footer"><span>LAB SIMULATION / OPT IN HOSTS</span><span>01 / 06</span></div>
+          </div>
+        </article>
+
+        <div class="collection-heading"><div><span class="eyebrow">THE PROJECT INDEX</span><h3>Selected experiments <span id="project-count" aria-live="polite">05</span></h3></div>
+          <div class="filters" aria-label="Project category filters"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button><button type="button" class="filter" data-filter="data" aria-pressed="false">AI &amp; Data</button><button type="button" class="filter" data-filter="research" aria-pressed="false">Research</button></div>
+        </div>
+
+        <div class="project-grid" id="projects">
+          <a class="project-card linguax" data-category="software data" href="https://github.com/kgeckin/UP-School-AI-First-Developer/tree/main/Capstone" target="_blank" rel="noopener noreferrer"><div class="card-visual">
+            <div class="visual-caption">02 / APPLIED AI <span>AUDIO → LANGUAGE</span></div>
+            <div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <span class="visual-note">RECOGNIZE · TRANSLATE · CAPTION</span>
+          </div><div class="card-copy"><span class="card-type">APPLIED AI / SOFTWARE</span><h4>LinguaX <span>↗</span></h4><p>Speech recognition, translation and subtitle generation in a Streamlit application.</p><small>Python · Whisper · Streamlit</small></div></a>
+
+          <a class="project-card inventory" data-category="software" href="https://github.com/kgeckin/W-Code2.0_FrontEnd/tree/main/HW" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">03 / WEB SOFTWARE <span>ASSET TRACKING</span></div>
+            <div class="inventory-mock" aria-hidden="true"><div>INVENTORY REGISTER <b>● ● ●</b></div><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span></div>
+          </div><div class="card-copy"><span class="card-type">FULL STACK / WEB</span><h4>Inventory Portal <span>↗</span></h4><p>A practical Flask prototype for organizing assets and administrative workflows.</p><small>Flask · Python · JavaScript</small></div></a>
+
+          <a class="project-card falcon" data-category="data research" href="https://github.com/kgeckin/IBM_Applied_Data_Science_Capstone" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">04 / APPLIED DATA <span>PREDICTIVE ANALYSIS</span></div>
+            <svg class="trajectory" viewBox="0 0 460 170" aria-hidden="true"><path d="M20 152H440M37 18V152" stroke="#97A9B3" stroke-opacity=".3"/><path d="M40 145C101 133 147 149 186 89S273 48 319 58 386 25 431 17" stroke="#8DDBCE" stroke-width="3" fill="none"/><circle cx="186" cy="89" r="6" fill="#DABC83"/><circle cx="319" cy="58" r="6" fill="#DABC83"/><circle cx="431" cy="17" r="6" fill="#DABC83"/></svg>
+          </div><div class="card-copy"><span class="card-type">DATA SCIENCE</span><h4>Falcon 9 Analysis <span>↗</span></h4><p>Exploratory analysis and machine learning experiments with reusable launch data.</p><small>Python · SQL · Machine Learning</small></div></a>
+
+          <a class="project-card physics" data-category="data research" href="https://github.com/kgeckin/FIZ_437E" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">05 / COMPUTATIONAL PHYSICS <span>MODELS</span></div>
+            <div class="physics-art" aria-hidden="true"><div class="orbit a"></div><div class="orbit b"></div><div class="orbit c"></div><span class="atom-center"></span></div>
+          </div><div class="card-copy"><span class="card-type">PHYSICS / COMPUTATION</span><h4>Computational Physics <span>↗</span></h4><p>Numerical analysis, data experiments and scientific computing notebooks.</p><small>Python · Scientific Data · Notebooks</small></div></a>
+
+          <a class="project-card game" data-category="software" href="https://github.com/kgeckin/game2048" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">06 / INTERACTIVE <span>GAME LOGIC</span></div>
+            <div class="tile-grid" aria-hidden="true"><span>2</span><span>4</span><span>8</span><span>16</span><span>32</span><span>64</span><span>128</span><span>256</span></div>
+          </div><div class="card-copy"><span class="card-type">INTERACTIVE SOFTWARE</span><h4>2048 <span>↗</span></h4><p>A number puzzle built in browser and Flask versions, exploring state and interaction.</p><small>JavaScript · Flask · Python</small></div></a>
+        </div>
+        <p class="archive-link"><a href="https://github.com/kgeckin?tab=repositories" target="_blank" rel="noopener noreferrer">Browse all public repositories ↗</a></p>
+      </div>
+    </section>
+
+    <section class="approach-section section" id="approach" aria-labelledby="approach-title">
+      <div class="container approach-grid">
+        <div><span class="eyebrow">03 / HOW I THINK</span><h2 id="approach-title">The system <em>is the context.</em></h2><p>I approach engineering through relationships: constraints, dependencies, failure domains, and the consequences of changes across layers.</p><p>My background in physics engineering informs the way I model problems. My work in enterprise storage delivery grounds that curiosity in practical infrastructure.</p><a class="project-link" href="https://github.com/kgeckin" target="_blank" rel="noopener noreferrer">Explore the work ↗</a></div>
+        <div class="approach-list"><div><span>01</span><strong>Understand</strong><p>Identify requirements, boundaries and assumptions.</p></div><div><span>02</span><strong>Design</strong><p>Connect compute, storage, networking and failure domains.</p></div><div><span>03</span><strong>Validate</strong><p>Measure behavior, test the implementation and document tradeoffs.</p></div><div><span>04</span><strong>Improve</strong><p>Use feedback and observability to make systems easier to operate.</p></div></div>
+      </div>
+    </section>
+
+    <section class="closing-section" id="connect"><div class="container closing-inner"><span class="eyebrow">04 / CONTINUE THE CONVERSATION</span><h2>Curiosity,<br><em>made practical.</em></h2><p>Storage, systems, applied AI and everything between them.</p><div class="closing-actions"><a class="button primary" href="https://github.com/kgeckin" target="_blank" rel="noopener noreferrer">Explore GitHub ↗</a><a class="button outline" href="https://www.linkedin.com/in/krgckn/" target="_blank" rel="noopener noreferrer">Find me on LinkedIn ↗</a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container footer-inner"><span>KG. / SYSTEMS IN CONTEXT</span><span>Designed with intention · <span id="year">2026</span></span><a href="#top">BACK TO TOP ↑</a></div></footer>
 </body>
 </html>
