@@ -112,34 +112,58 @@
                 <div class="mock-bottom"><span><i class="mock-ring"></i> CAPACITY</span><span>▂▅▇▄▆ &nbsp; OPERATIONS</span></div>
               </div>
             </div>
-            <div class="art-footer"><span>LAB SIMULATION / OPT IN HOSTS</span><span>01 / 06</span></div>
+            <div class="art-footer"><span>LAB SIMULATION / OPT IN HOSTS</span><span>01 / 07</span></div>
           </div>
         </article>
 
-        <div class="collection-heading"><div><span class="eyebrow">THE PROJECT INDEX</span><h3>Selected experiments <span id="project-count" aria-live="polite">05</span></h3></div>
-          <div class="filters" aria-label="Project category filters"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button><button type="button" class="filter" data-filter="data" aria-pressed="false">AI &amp; Data</button><button type="button" class="filter" data-filter="research" aria-pressed="false">Research</button></div>
+        <div class="collection-heading"><div><span class="eyebrow">THE PROJECT INDEX</span><h3>Selected experiments <span id="project-count" aria-live="polite">06</span></h3></div>
+          <div class="filters" aria-label="Project category filters"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All work</button><button type="button" class="filter" data-filter="systems" aria-pressed="false">Infrastructure</button><button type="button" class="filter" data-filter="software" aria-pressed="false">Software</button><button type="button" class="filter" data-filter="data" aria-pressed="false">AI &amp; Data</button><button type="button" class="filter" data-filter="research" aria-pressed="false">Research</button></div>
         </div>
 
         <div class="project-grid" id="projects">
+          <a class="project-card linuxops" data-category="systems software" href="https://github.com/kgeckin/linuxops-toolkit" target="_blank" rel="noopener noreferrer">
+            <div class="card-visual">
+              <div class="visual-caption">02 / LINUX OPERATIONS <span>LOCAL OBSERVABILITY</span></div>
+              <div class="linuxops-terminal" aria-hidden="true">
+                <div class="linuxops-terminal-top"><span class="terminal-lights"><i></i><i></i><i></i></span><span>linuxops / live monitor</span><span class="terminal-live"><i></i> LIVE</span></div>
+                <div class="linuxops-terminal-body">
+                  <div class="linuxops-command">$ linuxops serve</div>
+                  <div class="linuxops-stats"><span>CPU<strong>2s</strong></span><span>MEM<strong>LIVE</strong></span><span>DISK<strong>OK</strong></span></div>
+                  <svg class="linuxops-trend" viewBox="0 0 330 60" preserveAspectRatio="none">
+                    <path d="M0 19H330M0 42H330" fill="none" stroke="#496171" stroke-opacity=".55"/>
+                    <path d="M0 51L28 43 53 47 79 26 106 34 133 16 158 35 188 25 211 39 242 17 269 29 296 12 330 23" fill="none" stroke="#72DFCE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <div class="linuxops-terminal-bottom">SSE TELEMETRY <span>● ILLUSTRATIVE</span></div>
+                </div>
+              </div>
+              <span class="visual-note">MEASURE · DIAGNOSE · UNDERSTAND</span>
+            </div>
+            <div class="card-copy">
+              <span class="card-type">LINUX / OPERATIONS</span>
+              <h4>LinuxOps Toolkit <span>↗</span></h4>
+              <p>Live Linux CPU, memory, disk and network readings with CLI diagnostics, alert thresholds and a separate SQLite history.</p>
+              <small>Python · FastAPI · SSE · SQLite</small>
+            </div>
+          </a>
           <a class="project-card linguax" data-category="software data" href="https://github.com/kgeckin/UP-School-AI-First-Developer/tree/main/Capstone" target="_blank" rel="noopener noreferrer"><div class="card-visual">
-            <div class="visual-caption">02 / APPLIED AI <span>AUDIO → LANGUAGE</span></div>
+            <div class="visual-caption">03 / APPLIED AI <span>AUDIO → LANGUAGE</span></div>
             <div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
             <span class="visual-note">RECOGNIZE · TRANSLATE · CAPTION</span>
           </div><div class="card-copy"><span class="card-type">APPLIED AI / SOFTWARE</span><h4>LinguaX <span>↗</span></h4><p>Speech recognition, translation and subtitle generation in a Streamlit application.</p><small>Python · Whisper · Streamlit</small></div></a>
 
-          <a class="project-card inventory" data-category="software" href="https://github.com/kgeckin/W-Code2.0_FrontEnd/tree/main/HW" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">03 / WEB SOFTWARE <span>ASSET TRACKING</span></div>
+          <a class="project-card inventory" data-category="software" href="https://github.com/kgeckin/W-Code2.0_FrontEnd/tree/main/HW" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">04 / WEB SOFTWARE <span>ASSET TRACKING</span></div>
             <div class="inventory-mock" aria-hidden="true"><div>INVENTORY REGISTER <b>● ● ●</b></div><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span><span><i></i><b></b><em></em></span></div>
           </div><div class="card-copy"><span class="card-type">FULL STACK / WEB</span><h4>Inventory Portal <span>↗</span></h4><p>A practical Flask prototype for organizing assets and administrative workflows.</p><small>Flask · Python · JavaScript</small></div></a>
 
-          <a class="project-card falcon" data-category="data research" href="https://github.com/kgeckin/IBM_Applied_Data_Science_Capstone" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">04 / APPLIED DATA <span>PREDICTIVE ANALYSIS</span></div>
+          <a class="project-card falcon" data-category="data research" href="https://github.com/kgeckin/IBM_Applied_Data_Science_Capstone" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">05 / APPLIED DATA <span>PREDICTIVE ANALYSIS</span></div>
             <svg class="trajectory" viewBox="0 0 460 170" aria-hidden="true"><path d="M20 152H440M37 18V152" stroke="#97A9B3" stroke-opacity=".3"/><path d="M40 145C101 133 147 149 186 89S273 48 319 58 386 25 431 17" stroke="#8DDBCE" stroke-width="3" fill="none"/><circle cx="186" cy="89" r="6" fill="#DABC83"/><circle cx="319" cy="58" r="6" fill="#DABC83"/><circle cx="431" cy="17" r="6" fill="#DABC83"/></svg>
           </div><div class="card-copy"><span class="card-type">DATA SCIENCE</span><h4>Falcon 9 Analysis <span>↗</span></h4><p>Exploratory analysis and machine learning experiments with reusable launch data.</p><small>Python · SQL · Machine Learning</small></div></a>
 
-          <a class="project-card physics" data-category="data research" href="https://github.com/kgeckin/FIZ_437E" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">05 / COMPUTATIONAL PHYSICS <span>MODELS</span></div>
+          <a class="project-card physics" data-category="data research" href="https://github.com/kgeckin/FIZ_437E" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">06 / COMPUTATIONAL PHYSICS <span>MODELS</span></div>
             <div class="physics-art" aria-hidden="true"><div class="orbit a"></div><div class="orbit b"></div><div class="orbit c"></div><span class="atom-center"></span></div>
           </div><div class="card-copy"><span class="card-type">PHYSICS / COMPUTATION</span><h4>Computational Physics <span>↗</span></h4><p>Numerical analysis, data experiments and scientific computing notebooks.</p><small>Python · Scientific Data · Notebooks</small></div></a>
 
-          <a class="project-card game" data-category="software" href="https://github.com/kgeckin/game2048" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">06 / INTERACTIVE <span>GAME LOGIC</span></div>
+          <a class="project-card game" data-category="software" href="https://github.com/kgeckin/game2048" target="_blank" rel="noopener noreferrer"><div class="card-visual"><div class="visual-caption">07 / INTERACTIVE <span>GAME LOGIC</span></div>
             <div class="tile-grid" aria-hidden="true"><span>2</span><span>4</span><span>8</span><span>16</span><span>32</span><span>64</span><span>128</span><span>256</span></div>
           </div><div class="card-copy"><span class="card-type">INTERACTIVE SOFTWARE</span><h4>2048 <span>↗</span></h4><p>A number puzzle built in browser and Flask versions, exploring state and interaction.</p><small>JavaScript · Flask · Python</small></div></a>
         </div>
