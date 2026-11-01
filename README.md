@@ -12,11 +12,12 @@
 
 ## Overview
 
-This GitHub Pages portfolio showcases selected **publicly accessible** engineering projects. Its centerpiece is [StorageOps Lab](https://github.com/kgeckin/storageops-lab), a local observability lab that labels simulated storage arrays separately from opted-in real host metrics. The visual console on the portfolio is an illustration, not a screenshot or a live system.
+This GitHub Pages portfolio showcases selected **publicly accessible** engineering projects. Its featured work includes [StorageOps Lab](https://github.com/kgeckin/storageops-lab), a local storage observability lab, and [LinuxOps Toolkit](https://github.com/kgeckin/linuxops-toolkit), a local Linux monitoring console with two-second streaming updates and separately persisted history. StorageOps labels simulated arrays and optional host reports distinctly; LinuxOps measures the Linux OS where its process runs, not native Windows hardware inside WSL. The visual console on the portfolio is an illustration, not a screenshot or a live system.
 
 ## Selected work
 
 * StorageOps Lab: Python, FastAPI, React, ECharts and Docker.
+* LinuxOps Toolkit: FastAPI, Linux telemetry, Server-Sent Events, SQLite, CLI diagnostics and explicit threshold rules.
 * LinguaX: speech recognition, translation and subtitles.
 * Inventory Portal: Flask asset management prototype.
 * Falcon 9 Analysis: applied data science experiments.
@@ -28,7 +29,7 @@ Every project link points to a public repository. Internal infrastructure materi
 ## What it includes
 
 * Hand-authored architecture illustration and an editorial featured project panel.
-* Five illustrated project cards and working category filters.
+* Six illustrated project cards with infrastructure, software, data and research filters.
 * Responsive layout for mobile and desktop.
 * Persisted dark/light theme preference, keyboard focus styling and skip navigation.
 * Semantic HTML, reduced-motion media handling and no third-party JS or analytics.
@@ -55,7 +56,7 @@ kgeckin.github.io/
 
 ## Validation
 
-Verify navigation, anchor links, all six project links, theme toggle and project filtering on desktop and mobile. Check keyboard operation and no motion in reduced-motion mode. The theme and filtering code has been statically inspected, but cross-browser visual testing is still required.
+Verify navigation, anchor links, all seven project links, theme toggle and project filtering on desktop and mobile. Check keyboard operation and no motion in reduced-motion mode. The theme and filtering code has been statically inspected, but cross-browser visual testing is still required.
 
 The public GitHub Pages URL is updated only after the feature branch is merged into the configured publishing branch.
 
