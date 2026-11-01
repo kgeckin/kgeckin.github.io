@@ -1,54 +1,70 @@
 <div align="center">
 
-<img src="docs/assets/cover.svg" width="100%" alt="KG portfolio website cover" />
+<img src="docs/assets/cover.svg" width="100%" alt="KG engineering portfolio cover" />
 
-**A responsive, lightweight engineering portfolio and project index.**
+# Kardelen Geçkin · Engineering Portfolio
 
-[View website](https://kgeckin.github.io/) · [Selected projects](#selected-work) · [Development](#getting-started)
+**A curated static website about infrastructure, observability, applied software and computational work.**
+
+[Live portfolio](https://kgeckin.github.io/) · [Source](index.html) · [Project selection](#selected-work)
 
 </div>
 
 ## Overview
 
-This repository hosts the GitHub Pages portfolio for Kardelen Geçkin. The website introduces current infrastructure engineering experience and provides direct links to selected public projects.
-
-## What it includes
-
-* Responsive charcoal and champagne visual identity.
-* Filterable project cards for real public GitHub projects.
-* A short, expandable background section and contact links.
-* Accessible focus styles and reduced-motion support.
+This GitHub Pages portfolio showcases selected **publicly accessible** engineering projects. Its centerpiece is [StorageOps Lab](https://github.com/kgeckin/storageops-lab), a local observability lab that labels simulated storage arrays separately from opted-in real host metrics. The visual console on the portfolio is an illustration, not a screenshot or a live system.
 
 ## Selected work
 
-The website currently links to the Inventory Portal, LinguaX, Falcon 9 Analysis and 2048. Future projects will be added only when working repositories exist.
+* StorageOps Lab: Python, FastAPI, React, ECharts and Docker.
+* LinguaX: speech recognition, translation and subtitles.
+* Inventory Portal: Flask asset management prototype.
+* Falcon 9 Analysis: applied data science experiments.
+* Computational Physics: scientific notebooks and numerical problems.
+* 2048: interactive JavaScript and Flask puzzle.
+
+Every project link points to a public repository. Internal infrastructure material and private security awareness projects are intentionally omitted.
+
+## What it includes
+
+* Hand-authored architecture illustration and an editorial featured project panel.
+* Five illustrated project cards and working category filters.
+* Responsive layout for mobile and desktop.
+* Persisted dark/light theme preference, keyboard focus styling and skip navigation.
+* Semantic HTML, reduced-motion media handling and no third-party JS or analytics.
+* Dedicated local CSS and JavaScript modules.
 
 ## Getting started
 
-Open \`index.html\` in a modern browser. No build process, package install or backend is required.
+Open `index.html` in any modern browser. Alternatively serve this directory with a local static file server. There is no build process, dependency installation, framework runtime, contact form or backend.
 
 ## Repository structure
 
-~~~text
+```text
 kgeckin.github.io/
 ├── index.html
-├── docs/assets/
-│   └── cover.svg
+├── styles.css
+├── app.js
+├── assets/
+│   └── favicon.svg
+├── docs/
+│   └── assets/
+│       └── cover.svg
 └── README.md
-~~~
+```
 
 ## Validation
 
-No automated browser test suite is configured. Before merging, review the layout in desktop and mobile browser sizes and confirm filters, keyboard navigation, and repository links.
+Verify navigation, anchor links, all six project links, theme toggle and project filtering on desktop and mobile. Check keyboard operation and no motion in reduced-motion mode. The theme and filtering code has been statically inspected, but cross-browser visual testing is still required.
 
-## Architecture & decisions
+The public GitHub Pages URL is updated only after the feature branch is merged into the configured publishing branch.
 
-The site intentionally uses plain HTML, CSS and a few lines of JavaScript. Projects are represented by actual repository links rather than fictional dashboards. A full static site framework is not needed for the current scope.
+## Design and privacy
 
-## Security & limitations
+Dark charcoal and champagne gold retain the KG visual identity, with restrained teal for infrastructure signals. The alternate light scheme makes the site more adaptable to individual viewing conditions. Colors and interaction states are chosen for readable contrast and clear meaning, not for a claim that one palette is scientifically optimal for every person.
 
-There is no login, telemetry collector, contact form or user data processing. Linked external sites have their own privacy policies. The site is a portfolio, not an enterprise infrastructure management tool.
+The portfolio does not collect visitor information or make requests to an analytics provider. It links to GitHub and LinkedIn, which have their own policies.
 
 ## License
 
-No repository license file was found.
+No repository license has been selected.
